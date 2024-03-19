@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+const PORT = 3000
 const openai = new OpenAI();
 
 const askChatGpt = async (req, res) => {
@@ -32,7 +33,6 @@ app.use(cors());
 
 app.post("/chatbot", askChatGpt);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+})
