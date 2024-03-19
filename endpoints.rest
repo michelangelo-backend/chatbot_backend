@@ -3,5 +3,5 @@ POST http://localhost:3000/chatbot
 Content-Type: application/json
 
 {
-"userInput": "List are the colors of the rainbow"
+"userInput": "List the colors of the rainbow"
 }
